@@ -82,6 +82,8 @@ http_response <- function(req){
   )
 }
 
+stopAllServers()
+
 startServer(
   "127.0.0.1",
   8080,
@@ -223,5 +225,5 @@ httpuv_app <- function(delay = NULL){
   )
   s
 }
-
-### didnt work!!
+httpuv_app()
+stopAllServers()
